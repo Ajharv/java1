@@ -9,17 +9,12 @@ public class Wk2 {
         ArrayList<String> wordList = new ArrayList<String>();
 
         for (int i = 0; i < word.length(); i++) {
-            //adding the "" to convert the char into a string 
-            //this is a shortcut for converting char/numbers to string 
+             
             wordList.add(word.charAt(i) + "");
         }
         //this should print an ArrayList [J,a,v,a] 
         System.out.println(wordList);
 
-        //Now create a new string where you jumble the word Java  
-        //A sample jumble: aJav         
-        //the following generates a random number between 0-3 
-        //you may need to use it in your code somewhere 
         int randomNum = 0;
         String jumble = "";
         for (int i = 0; i < 4; i++) {                    
@@ -27,34 +22,13 @@ public class Wk2 {
             jumble += wordList.get(randomNum);
             wordList.remove(randomNum);       
         }
-        //Your code goes here 
-        //Create a for loop that loops 4 times 
-
-        //In the loop, create a random number  
-        //Using the random number, get a letter from wordList 
-        //Add the chosen letter to a string 
-        //Remove this letter from the wordList 
-//(Think: What should be the range from which the random 
-//number is chosen? Remember you are removing items from 
-//the wordList as the loop progresses.) 
         return jumble;
-        /**
-         * What happens when this line is removed? Why?*
-         */
+       
     }
 
     public static void main(String[] args) {
-        /**
-         * should wordList be declared here since this is local to this method?
-         * Where should you place this line of code? *
-         */
-        //ArrayList<String> wordList = new ArrayList<String>(); 
-
+ 
         String w = "Java";
-        /**
-         * how many arguments/inputs does createJumble take? How many are here?
-         * If they mismatch, which one should you remove from here?*
-         */
         String result = createJumble(w);
         System.out.println(result);
     }
